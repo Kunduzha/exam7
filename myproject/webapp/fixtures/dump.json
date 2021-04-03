@@ -1,0 +1,143 @@
+[
+{
+  "model": "webapp.poll",
+  "pk": 1,
+  "fields": {
+    "created_at": "2021-04-03T05:26:27.209Z",
+    "updated_at": "2021-04-03T05:26:27.209Z",
+    "quetion": "Кто президент КР?"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 2,
+  "fields": {
+    "created_at": "2021-04-03T05:26:51.027Z",
+    "updated_at": "2021-04-03T05:26:51.027Z",
+    "quetion": "Любимый цвет?"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 3,
+  "fields": {
+    "created_at": "2021-04-03T05:27:10.019Z",
+    "updated_at": "2021-04-03T05:27:10.019Z",
+    "quetion": "Твой любимый город в КР"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 4,
+  "fields": {
+    "created_at": "2021-04-03T05:27:28.345Z",
+    "updated_at": "2021-04-03T05:27:28.345Z",
+    "quetion": "Твоя любимая область в КР?"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 5,
+  "fields": {
+    "created_at": "2021-04-03T05:27:50.841Z",
+    "updated_at": "2021-04-03T05:27:50.841Z",
+    "quetion": "Твой любимый район в КР?"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 6,
+  "fields": {
+    "created_at": "2021-04-03T05:28:05.917Z",
+    "updated_at": "2021-04-03T05:28:05.917Z",
+    "quetion": "Лучший певец в КР?"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 7,
+  "fields": {
+    "created_at": "2021-04-03T05:28:40.862Z",
+    "updated_at": "2021-04-03T05:28:40.862Z",
+    "quetion": "Лучший телеведущий?"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 1,
+  "fields": {
+    "created_at": "2021-04-03T05:28:56.154Z",
+    "updated_at": "2021-04-03T05:28:56.154Z",
+    "poll": 1,
+    "text": "Садыр Жапаров"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 2,
+  "fields": {
+    "created_at": "2021-04-03T05:29:17.101Z",
+    "updated_at": "2021-04-03T05:29:17.101Z",
+    "poll": 1,
+    "text": "Адахан Мадумаров"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 3,
+  "fields": {
+    "created_at": "2021-04-03T05:29:35.776Z",
+    "updated_at": "2021-04-03T05:29:35.776Z",
+    "poll": 1,
+    "text": "Омурбек Бабанов"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 4,
+  "fields": {
+    "created_at": "2021-04-03T05:29:59.507Z",
+    "updated_at": "2021-04-03T05:29:59.507Z",
+    "poll": 4,
+    "text": "Талас"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 5,
+  "fields": {
+    "created_at": "2021-04-03T05:30:13.216Z",
+    "updated_at": "2021-04-03T05:30:13.216Z",
+    "poll": 4,
+    "text": "Ош"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 6,
+  "fields": {
+    "created_at": "2021-04-03T05:30:24.524Z",
+    "updated_at": "2021-04-03T05:30:24.524Z",
+    "poll": 4,
+    "text": "Чуй"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$kTm4euPXNTcD$/qLzovPGX2DH/HWEYhFNF4EfhKGXHexFelBl8UpsCS4=",
+    "last_login": "2021-04-03T05:24:54.075Z",
+    "is_superuser": true,
+    "username": "kunduz",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-04-03T05:22:51.071Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
