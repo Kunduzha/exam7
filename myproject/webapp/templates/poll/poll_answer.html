@@ -1,1 +1,35 @@
-{% extends 'partial/../base.html' %}
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {% if not poll %}
+        <h2> нету вопросов</h2>
+
+
+
+    {% else %}
+<div >
+<div >
+    <div >
+        <h1>Опросник</h1>
+    </div>
+</div>
+<div >
+    <div>
+
+<h1>{{ poll.quetion }}</h1>
+
+<ul>
+{% for choice in poll.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'poll_more' poll.id %}">Vote again?</a>
+
+            </div>
+</div>
+    </div>
+
+{% endif %}
+{%  endblock content %}

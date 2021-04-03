@@ -1,6 +1,10 @@
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse, reverse_lazy
+from django.views import generic
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from webapp.models import Poll
+
+from webapp.models import Poll, AnswerForPoll, Choice
 from webapp.forms import PollForms
 
 
@@ -41,3 +45,24 @@ class DeletePoll(DeleteView):
     model = Poll
     context_object_name = 'poll'
     success_url = reverse_lazy('main_page')
+
+
+class ResultsView(generic.DetailView):
+    model = AnswerForPoll
+    template_name = 'poll/poll_answer.html'
+
+def vote(request, poll_id):
+    question = get_object_or_404(Poll, pk=poll_id)
+    try:
+        selected_choice = question.choice_set.get(pk=request.POST['choice'])
+    except (KeyError, Choice.DoesNotExist):
+
+        return render(request, 'poll/poll_view.html', {
+            'question': question,
+            'error_message': "You didn't select a choice.",
+        })
+    else:
+        selected_choice.votes += 1
+        selected_choice.save()
+
+        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
