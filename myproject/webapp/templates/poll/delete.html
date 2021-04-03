@@ -1,0 +1,13 @@
+{% extends "partial/../base.html" %}
+{% block title %} Удалить вопроса{% endblock %}
+{% block menu %}
+    <li><a href="{% url 'poll_more' poll.pk %}">Назад к вопросу</a></li>
+{% endblock %}
+{% block content %}
+    <h1>Точно хотите удалить этого вопроса? </h1>
+    <form method="POST" action="{% url "delete_poll" poll.pk %}" class="text-center">
+        {% csrf_token %}
+        <p><input type="submit" value="Подтверждаю!"></p>
+        <p><a href="{% url "poll_more" poll.pk %}">Отменяю</a></p>
+    </form>
+{% endblock %}

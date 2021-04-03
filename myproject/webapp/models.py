@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 # Create your models here.
 
 class BaseModel(models.Model):
@@ -24,7 +25,7 @@ class Poll(BaseModel):
         return self.quetion
 
 
-class Choice(BaseModel):
+class Choice(models.Model):
     poll = models.ForeignKey('webapp.Poll', related_name='poll', on_delete=models.CASCADE, verbose_name='Опрос')
     text = models.TextField(max_length=500, verbose_name='ответ', null=False, blank=False)
 

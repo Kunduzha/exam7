@@ -1,0 +1,13 @@
+{% extends 'partial/../base.html' %}
+{% block menu %}
+    <li><a href="{% url "poll_more" poll.pk %}">back</a></li>
+{% endblock %}
+{% block content %}
+
+
+    <form action="" method="post">
+        {% include 'poll/../partial/list_form.html' with button_text="изменить"%}
+    </form>
+
+
+{% endblock content %}

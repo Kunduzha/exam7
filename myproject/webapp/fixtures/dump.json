@@ -63,11 +63,36 @@
   }
 },
 {
+  "model": "webapp.poll",
+  "pk": 8,
+  "fields": {
+    "created_at": "2021-04-03T08:12:51.060Z",
+    "updated_at": "2021-04-03T08:12:51.060Z",
+    "quetion": "Кто самый смелый?"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 9,
+  "fields": {
+    "created_at": "2021-04-03T08:13:42.505Z",
+    "updated_at": "2021-04-03T08:13:42.505Z",
+    "quetion": "Кто самый смелый?"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 10,
+  "fields": {
+    "created_at": "2021-04-03T08:14:20.387Z",
+    "updated_at": "2021-04-03T08:30:57.491Z",
+    "quetion": "Кто получит 100 баллов сегодня?"
+  }
+},
+{
   "model": "webapp.choice",
   "pk": 1,
   "fields": {
-    "created_at": "2021-04-03T05:28:56.154Z",
-    "updated_at": "2021-04-03T05:28:56.154Z",
     "poll": 1,
     "text": "Садыр Жапаров"
   }
@@ -76,8 +101,6 @@
   "model": "webapp.choice",
   "pk": 2,
   "fields": {
-    "created_at": "2021-04-03T05:29:17.101Z",
-    "updated_at": "2021-04-03T05:29:17.101Z",
     "poll": 1,
     "text": "Адахан Мадумаров"
   }
@@ -86,8 +109,6 @@
   "model": "webapp.choice",
   "pk": 3,
   "fields": {
-    "created_at": "2021-04-03T05:29:35.776Z",
-    "updated_at": "2021-04-03T05:29:35.776Z",
     "poll": 1,
     "text": "Омурбек Бабанов"
   }
@@ -96,8 +117,6 @@
   "model": "webapp.choice",
   "pk": 4,
   "fields": {
-    "created_at": "2021-04-03T05:29:59.507Z",
-    "updated_at": "2021-04-03T05:29:59.507Z",
     "poll": 4,
     "text": "Талас"
   }
@@ -106,8 +125,6 @@
   "model": "webapp.choice",
   "pk": 5,
   "fields": {
-    "created_at": "2021-04-03T05:30:13.216Z",
-    "updated_at": "2021-04-03T05:30:13.216Z",
     "poll": 4,
     "text": "Ош"
   }
@@ -116,8 +133,6 @@
   "model": "webapp.choice",
   "pk": 6,
   "fields": {
-    "created_at": "2021-04-03T05:30:24.524Z",
-    "updated_at": "2021-04-03T05:30:24.524Z",
     "poll": 4,
     "text": "Чуй"
   }

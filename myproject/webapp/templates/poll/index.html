@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div >
+
+
+        {% if not polls %}
+            <h1>Нет проектов</h1>
+        {% else %}
+
+            {% if is_paginated %}
+
+                 {% include 'poll/pagination.html' %}
+
+            {% endif %}
+             <table class="table">
+  <caption>List of users</caption>
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Вопрос</th>
+
+    </tr>
+  </thead>
+  <tbody>
+            {% for poll in polls %}
+                <tr>
+{#            <td class="table-success">#}
+{#                <a href="{% url 'list_more' list.pk %}">{{ list.title }}</a>#}
+{#            </td>#}
+            <td class="table-active">
+
+                  <a href="{% url 'poll_more' poll.pk %}">{{ poll.id}}</a>
+            </td>
+
+            <td class="table-active">
+                вопрос: {{ poll.quetion }}
+            </td>
+
+
+                </tr>
+            {% endfor %}
+    </tbody>
+</table>
+
+
+        {% endif %}
+    </div>
+{% endblock content %}
