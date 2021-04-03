@@ -38,13 +38,13 @@ class Choice(models.Model):
     def __str__(self):
         return self.text[:20]
 
-# class AnswerForPoll(BaseModel):
-#
-#     poll = models.ForeignKey('webapp.Poll', related_name='poll_answers', on_delete=models.CASCADE, verbose_name='вопрос')
-#
-#     answer = models.ForeignKey('webapp.Choice', related_name='answers_poll', on_delete=models.CASCADE, verbose_name='ответ')
-#
-#
-#     def __str__(self):
-#
-#         return "{} | {}".format(self.poll, self.answer)
+class AnswerForPoll(BaseModel):
+
+    poll = models.ForeignKey('webapp.Poll', related_name='poll_answers', on_delete=models.CASCADE, verbose_name='вопрос')
+
+    answer = models.ForeignKey('webapp.Choice', related_name='answers_poll', on_delete=models.CASCADE, verbose_name='ответ')
+
+
+    def __str__(self):
+
+        return "{} | {}".format(self.poll, self.answer)
