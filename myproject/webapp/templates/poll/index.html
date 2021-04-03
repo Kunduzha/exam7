@@ -5,7 +5,7 @@
 
 
         {% if not polls %}
-            <h1>Нет проектов</h1>
+            <h1>Нет вопросов</h1>
         {% else %}
 
             {% if is_paginated %}
@@ -25,9 +25,7 @@
   <tbody>
             {% for poll in polls %}
                 <tr>
-{#            <td class="table-success">#}
-{#                <a href="{% url 'list_more' list.pk %}">{{ list.title }}</a>#}
-{#            </td>#}
+
             <td class="table-active">
 
                   <a href="{% url 'poll_more' poll.pk %}">{{ poll.id}}</a>

@@ -26,7 +26,7 @@ class Poll(BaseModel):
 
 
 class Choice(models.Model):
-    poll = models.ForeignKey('webapp.Poll', related_name='poll', on_delete=models.CASCADE, verbose_name='Опрос')
+    poll = models.ForeignKey('webapp.Poll', related_name='answers', on_delete=models.CASCADE, verbose_name='Опрос')
     text = models.TextField(max_length=500, verbose_name='ответ', null=False, blank=False)
 
 
@@ -38,3 +38,13 @@ class Choice(models.Model):
     def __str__(self):
         return self.text[:20]
 
+# class AnswerForPoll(BaseModel):
+#
+#     poll = models.ForeignKey('webapp.Poll', related_name='poll_answers', on_delete=models.CASCADE, verbose_name='вопрос')
+#
+#     answer = models.ForeignKey('webapp.Choice', related_name='answers_poll', on_delete=models.CASCADE, verbose_name='ответ')
+#
+#
+#     def __str__(self):
+#
+#         return "{} | {}".format(self.poll, self.answer)

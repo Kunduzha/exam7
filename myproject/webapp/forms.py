@@ -1,13 +1,13 @@
 
 from django import forms
-from webapp.models import Poll
+from webapp.models import Poll, Choice
 
 
-# class ListForms(forms.ModelForm):
-#
-#     class Meta:
-#         model=List
-#         fields = ['types', 'status', 'title', 'description', 'about_list']
+class ChoiceForms(forms.ModelForm):
+
+    class Meta:
+        model=Choice
+        fields = ['text']
 
 
 

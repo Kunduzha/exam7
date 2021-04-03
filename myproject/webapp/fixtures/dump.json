@@ -90,6 +90,15 @@
   }
 },
 {
+  "model": "webapp.poll",
+  "pk": 13,
+  "fields": {
+    "created_at": "2021-04-03T10:31:48.874Z",
+    "updated_at": "2021-04-03T10:31:48.874Z",
+    "quetion": "арволарфывлоарлыв"
+  }
+},
+{
   "model": "webapp.choice",
   "pk": 1,
   "fields": {
@@ -135,6 +144,14 @@
   "fields": {
     "poll": 4,
     "text": "Чуй"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 9,
+  "fields": {
+    "poll": 13,
+    "text": "раволфдров"
   }
 },
 {
